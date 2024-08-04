@@ -14,12 +14,11 @@ body {
     flex-direction: column;
     width: 600px;
     height: 600px;
-    background: rgba(248, 161, 54, 0.45); /* White background with 90% opacity */
+    background: rgba(248, 161, 54, 0.45);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: space-evenly;
 }
 
 .social-login {
@@ -35,18 +34,16 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    font-size: 48px; /* Double the font size */
+    font-size: 48px;
     color: black;
 }
 
 .social-login h2 img {
-    /* height: 100px; Double the size */
-    width: 100px; /* Double the size */
+    width: 100px;
 }
 
 .social-login button img {
-    /* height: 35px; Double the size */
-    width: 35px; /* Double the size */
+    width: 35px;
 }
 
 .social-login button {
@@ -99,13 +96,13 @@ body {
     height: 40px;
     border: none; /* Remove the default border */
     border-bottom: 2px solid rgb(47, 46, 45);/* Add a bottom border */
-    background: rgba(255, 255, 255, 0.0); /* White background with 90% opacity */
+    background: rgba(255, 255, 255, 0.0);
 }
 
 .container button {
     height: 40px;
     color: #fff;
-    background-color: #008cd9;
+    background-color: #008cd9; /* Facebook button color */
     border: none;
     cursor: pointer;
     border-radius: 50px;
@@ -113,7 +110,7 @@ body {
 }
 
 .container button:hover {
-    background-color: #49b9fa;
+    background-color: #49b9fa; /* Facebook button color but slightly lighter */
 }
 
 /* Additional class to manage spacing of the last button */
