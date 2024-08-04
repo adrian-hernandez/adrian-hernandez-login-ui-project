@@ -40,19 +40,19 @@ body {
 }
 
 .social-login h2 img {
-    height: 100x; /* Double the size */
+    /* height: 100px; Double the size */
     width: 100px; /* Double the size */
 }
 
 .social-login button img {
-    height: 35x; /* Double the size */
+    /* height: 35px; Double the size */
     width: 35px; /* Double the size */
 }
 
 .social-login button {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:left;
     gap: 10px;
     width: 80%;
     height: 40px;
@@ -87,7 +87,7 @@ body {
 
 .container button {
     font-size: 16px;
-    width: 70%;
+    width: 44%;
     box-sizing: border-box;
 }
 
