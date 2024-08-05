@@ -1,26 +1,54 @@
+/* Global variables */
+:root {
+    /* Background */
+    --background-img: url('img/cloud-background.jpg');
+
+    /* Container */
+    --shadow: rgba(0, 0, 0, 0.6);
+
+    /* Shared between Google and FB icons*/
+    --icon-color: white;
+
+    /* Google button */
+    --default-google-button-color: #ff7326;
+    --hover-google-button-color: #ffa006;
+
+    /* All buttons */
+    --button-font-color: white;
+
+    /* Input boxes */
+    --placeholder-border-input-color: rgb(24, 23, 22);
+
+    /* Blue buttons (FB and bottom sign-in) */
+    --default-blue-button-color: #008cd9;
+    --hover-blue-button-color: #49b9fa;
+}
+
 body {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('img/cloud-background.jpg');
+    background-image: var(--background-img);
     background-size: cover;
     background-position: center;
 }
 
+/* The children of the main container flow in a column spaced evenly */
 .container {
     display: flex;
     flex-direction: column;
     width: 600px;
     height: 600px;
     background: rgba(248, 161, 54, 0.45);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 20px var(--shadow);
     border-radius: 10px;
     align-items: center;
     justify-content: space-evenly;
 }
 
+/* Div arranging the Google and FB buttons to be centered column */
 .social-login {
     display: flex;
     flex-direction: column;
@@ -42,10 +70,25 @@ body {
     width: 100px;
 }
 
-.social-login button img {
-    width: 35px;
+#google-button {
+    background-color: var(--default-google-button-color);
 }
 
+#google-button:hover {
+    background-color: var(--hover-google-button-color);
+}
+
+.facebook-button {
+    background-color: var(--default-blue-button-color); /* Facebook button color */
+}
+
+/* Manages the size of the Google and FB icons within the button */
+.social-login button img {
+    width: 35px;
+    color: var(--icon-color);
+}
+
+/* The children within the div itself are centered */
 .social-login button {
     display: flex;
     align-items: center;
@@ -58,20 +101,6 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 50px;
-}
-
-.social-login button:first-of-type {
-    background-color: #ff7326; /* Google button color */
-    color: white;
-}
-
-.social-login button:first-of-type:hover {
-    background-color: #ffa006;
-}
-
-.social-login button:last-of-type {
-    background-color: #008cd9; /* Facebook button color */
-    color: white;
 }
 
 .input-group {
@@ -89,20 +118,20 @@ body {
 }
 
 .container input {
-    font-size: 16px;
+    font-size: 20px;
     border: 1px solid #ccc;
     width: 100%;
     box-sizing: border-box;
     height: 40px;
     border: none; /* Remove the default border */
-    border-bottom: 2px solid rgb(47, 46, 45);/* Add a bottom border */
+    border-bottom: 2px solid var(--placeholder-border-input-color);/* Add a bottom border */
     background: rgba(255, 255, 255, 0.0);
 }
 
 .container button {
     height: 40px;
-    color: #fff;
-    background-color: #008cd9; /* Facebook button color */
+    color: var(--button-font-color);
+    background-color: var(--default-blue-button-color);
     border: none;
     cursor: pointer;
     border-radius: 50px;
@@ -110,11 +139,11 @@ body {
 }
 
 .container button:hover {
-    background-color: #49b9fa; /* Facebook button color but slightly lighter */
+    background-color: var(--hover-blue-button-color);
 }
 
-/* Additional class to manage spacing of the last button */
-.button-group {
+/* Manages spacing of the last button */
+.bottom-sign-in {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,6 +151,16 @@ body {
     width: 50%
 }
 
+/* The color used for the placeholder username and password */
 ::placeholder {
-    color: rgb(47, 46, 45);
+    color: var(--placeholder-border-input-color);
+    font-size: 20px;
+}
+
+/* Removes default borders when the input boxes are being used (in focus) */
+input:focus {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    outline: none; /* Remove default outline */
 }
