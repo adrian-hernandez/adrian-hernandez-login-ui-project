@@ -125,3 +125,10 @@ body {
 ::placeholder {
     color: rgb(47, 46, 45);
 }
+
+input:focus {
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+    outline: none; /* Remove default outline */
+}
