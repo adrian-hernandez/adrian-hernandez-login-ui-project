@@ -164,3 +164,11 @@ input:focus {
     border-left: 1px solid transparent;
     outline: none; /* Remove default outline */
 }
+
+/* Makes the container responsive to the size of the window's width */
+@media (max-width: 600px) {
+    .container {
+        width: 450px;
+        height: 450px;
+    }
+}
